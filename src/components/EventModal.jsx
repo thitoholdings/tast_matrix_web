@@ -52,7 +52,7 @@ export default function EventModal() {
     }
     setShowEventModal(false);
     const updateDB = await axios.post(
-      "http://localhost:3001/tasks/addContext",
+      "https://office.thitoholdings.co.bw/web_api/tasks/addContext",
       {
         context: JSON.stringify(context.savedEvents),
       }
@@ -109,7 +109,7 @@ export default function EventModal() {
     }
     setShowEventModal(false);
     const updateDB = await axios.post(
-      "http://localhost:3001/tasks/addContext",
+      "https://office.thitoholdings.co.bw/web_api/tasks/addContext",
       {
         context: JSON.stringify(context.savedEvents),
       }
@@ -124,7 +124,7 @@ export default function EventModal() {
     setShowEventModal(false);
 
     const updateDB = await axios.post(
-      "http://localhost:3001/tasks/addContext",
+      "https://office.thitoholdings.co.bw/web_api/tasks/addContext",
       {
         context: JSON.stringify(context.savedEvents),
       }

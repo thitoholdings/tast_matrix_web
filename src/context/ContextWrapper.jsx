@@ -40,7 +40,7 @@ export default function ContextWrapper(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/tasks/getContext")
+      .get("https://office.thitoholdings.co.bw/web_api/tasks/getContext")
       .then((res) => {
         //console.log(res.data.context);
         const events = JSON.parse(res.data[0].context);
