@@ -21,7 +21,6 @@ function App() {
       {showEventModal && <EventModal />}
 
       <div className="h-screen flex flex-col">
-        <button onClick={() => console.log(context)}>Kindly Press Me</button>
         <CalendarHeader />
         <div className="flex flex-1">
           <Sidebar />
