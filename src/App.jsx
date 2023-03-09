@@ -1,35 +1,34 @@
-import React, { useState, useContext, useEffect } from "react";
-import "./App.css";
-import { getMonth } from "./util";
-import CalendarHeader from "./components/CalendarHeader";
-import Sidebar from "./components/Sidebar";
-import Month from "./components/Month";
-import GlobalContext from "./context/GlobalContext";
-import EventModal from "./components/EventModal";
-import axios from "axios";
-function App() {
-  const [currenMonth, setCurrentMonth] = useState(getMonth());
-  const { monthIndex, showEventModal } = useContext(GlobalContext);
-  const context = useContext(GlobalContext);
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import './App.css'
 
-  useEffect(() => {
-    setCurrentMonth(getMonth(monthIndex));
-  }, [monthIndex]);
+function App() {
+  const [count, setCount] = useState(0)
 
   return (
-    <React.Fragment>
-      {showEventModal && <EventModal />}
-
-      <div className="h-screen flex flex-col">
-        <button onClick={() => console.log(context)}>Kindly Press Me</button>
-        <CalendarHeader />
-        <div className="flex flex-1">
-          <Sidebar />
-          <Month month={currenMonth} />
-        </div>
+    <div className="App">
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="/vite.svg" className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://reactjs.org" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
-    </React.Fragment>
-  );
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </div>
+  )
 }
 
-export default App;
+export default App
