@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 18.15.0
   
-      - run: npm install vite --force
+      - run: npm install vite --legacy-peer-deps
       - run: npm run build
 
   publish-gpr:
