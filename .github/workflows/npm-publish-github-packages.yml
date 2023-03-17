@@ -19,19 +19,6 @@ jobs:
       - run: npm install vite --legacy-peer-deps
       - run: npm run build --force
 
-  publish-gpr:
-    needs: build
-    runs-on: self-hosted
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.15.0
-          registry-url: https://npm.pkg.github.com/
-      - run: npm install vite --legacy-peer-deps
-      - run: npm publish
+ 
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
