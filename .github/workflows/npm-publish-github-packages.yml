@@ -20,7 +20,7 @@ jobs:
 
   publish-gpr:
     needs: build
-    runs-on: sel-hosted
+    runs-on: self-hosted
     permissions:
       contents: read
       packages: write
