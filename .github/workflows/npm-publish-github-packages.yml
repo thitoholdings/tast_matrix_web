@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.15.0
-      - run: npm install vite
+      - run: npm install vite --force
       - run: npm run build
 
   publish-gpr:
